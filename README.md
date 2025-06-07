@@ -1,4 +1,4 @@
-# LUMA - Voice AI Assistant
+ki# LUMA - Voice AI Assistant
 
 A real-time voice chatbot powered by Groq [LLaMA 3.1](https://ai.meta.com/blog/meta-llama-3-1/) and [Moonshine](https://arxiv.org/pdf/2410.15608) speech recognition.
 
@@ -55,11 +55,6 @@ python main.py
 ```
 
 For detailed setup instructions, configuration, and troubleshooting, see our [Technical Documentation](https://mc095.github.io/jsonparser/setup-luma.html)
-
-## Available Commands
-- `/help` - Show help menu and usage
-- `/stats` - Show session statistics
-- `/exit` - Exit program
 
 ---
 Feel free to clone it, use it, and have fun! 🌟
