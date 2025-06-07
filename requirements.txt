@@ -1,0 +1,9 @@
+numpy
+sounddevice
+torch
+silero-vad
+moonshine-onnx
+groq
+pyttsx3
+python-dotenv
+terminal-style
