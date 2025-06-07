@@ -6,6 +6,8 @@ A real-time voice chatbot powered by Groq [LLaMA 3.1](https://ai.meta.com/blog/m
 
 [Watch Demo Video](demos/luma-demo.mp4)
 
+Just  `pip install` and `GROQ_API_KEY`, Speak with your favourite Bot on all availiable models on [GroqCloud](https://console.groq.com/docs/models)
+
 ## Features
 
 ### Core Capabilities
