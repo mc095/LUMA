@@ -22,6 +22,27 @@ A real-time voice chatbot powered by Groq [LLaMA 3.1](https://ai.meta.com/blog/m
 - Command system for control
 - Session statistics
 
+## System Architecture
+
+![LUMA Flow Diagram](demos/flow.png)
+
+The diagram above illustrates LUMA's core components and their interactions:
+
+1. **Audio Processing**:
+   - Raw audio input capture
+   - Silero VAD for speech detection
+   - Audio buffering and chunking
+
+2. **Speech Processing Pipeline**:
+   - Moonshine ASR for speech-to-text
+   - Groq LLaMA 3.1 for language processing
+   - pyttsx3 for text-to-speech synthesis
+
+3. **System Components**:
+   - Terminal UI for interaction
+   - Session statistics tracking
+   - Command handler system
+
 ## Quick Start
 
 ```bash
