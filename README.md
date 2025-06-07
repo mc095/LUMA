@@ -39,6 +39,6 @@ For detailed setup instructions, configuration, and troubleshooting, see our [Te
 - `/exit` - Exit program
 
 ---
-Feel free to clone it, use it, and have fun! 🚀
+Feel free to clone it, use it, and have fun! 🌟
 
 Make a pull request to refactor the code, model usage, or contribute features.
