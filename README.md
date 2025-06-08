@@ -1,4 +1,4 @@
-ki# LUMA - Voice AI Assistant
+## LUMA - Voice AI Assistant
 
 A real-time voice chatbot powered by Groq [LLaMA 3.1](https://ai.meta.com/blog/meta-llama-3-1/) and [Moonshine](https://arxiv.org/pdf/2410.15608) speech recognition.
 
