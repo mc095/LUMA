@@ -123,51 +123,75 @@
         </div>
 
         <div class="setup-steps">
-            <h3>📝 Setup Instructions</h3>
+            <h3>📝 Quick Installation</h3>
+            <div class="note">
+                <strong>Step 1:</strong> Get your API keys:
+                <ul>
+                    <li>GROQ API Key (Required): Get it from <a href="https://console.groq.com/" target="_blank">GROQ Console</a></li>
+                    <li>Google (Gemini) API Key (Optional): Get it from <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a></li>
+                </ul>
+            </div>
+
+            <div class="code-block">
+                <h4>Windows (PowerShell):</h4>
+                <pre><code>irm https://raw.githubusercontent.com/mc095/LUMA/main/install.ps1 | iex</code></pre>
+            </div>
+
+            <div class="code-block">
+                <h4>Linux/MacOS (Bash):</h4>
+                <pre><code>curl -fsSL https://raw.githubusercontent.com/mc095/LUMA/main/install.sh | bash</code></pre>
+            </div>
+
+            <p>The installation script will:</p>
             <ol>
-                <li>Get your API keys:
-                    <ul>
-                        <li>GROQ API Key (Required): Get it from <a href="https://console.groq.com/" target="_blank">GROQ Console</a></li>
-                        <li>Google (Gemini) API Key (Optional): Get it from <a href="https://makersuite.google.com/app/apikey" target="_blank">Google AI Studio</a></li>
-                    </ul>
+                <li>Create a new directory for LUMA</li>
+                <li>Download the latest LUMA executable</li>
+                <li>Help you set up your API keys securely</li>
+                <li>Create the configuration file automatically</li>
+            </ol>
+        </div>
+
+        <div class="setup-steps">
+            <h3>🔧 Manual Installation</h3>
+            <p>If you prefer to install manually:</p>
+            <ol>
+                <li>Download LUMA executable:
+                    <pre><code>curl -L -o LUMA.exe https://github.com/mc095/LUMA/releases/latest/download/LUMA.exe</code></pre>
                 </li>
-                <li>Enter your API keys in the form below</li>
-                <li>Click "Generate Config" to create your configuration file</li>
-                <li>Click "Download LUMA" to get the application package</li>
-                <li>Extract the downloaded LUMA.zip file</li>
-                <li>Move the generated build_config.py file into the extracted folder</li>
-                <li>Run LUMA.exe to start your voice assistant!</li>
+                <li>Create build_config.py with your API keys:
+                    <pre><code>echo """Build configuration with embedded API keys.""" > build_config.py
+echo GROQ_API_KEY = "your-groq-key-here" >> build_config.py
+echo GEMINI_API_KEY = "your-gemini-key-here" >> build_config.py</code></pre>
+                </li>
             </ol>
         </div>
 
         <div class="note">
-            <strong>Note:</strong> Your API keys are processed locally in your browser. They are never sent to any server.
+            <strong>Security Note:</strong> All installation is done locally. Your API keys are never sent to any server - they're stored only on your computer in the config file.
         </div>
 
-        <div class="note">
-            <strong>Important:</strong> Windows Defender or your antivirus might flag LUMA.exe as suspicious because it's an unsigned executable. This is normal for Python applications built with PyInstaller. The code is open source and safe - you can verify the source code on <a href="https://github.com/mc095/LUMA" target="_blank">GitHub</a> and build it yourself. If you prefer, you can:
-            <ul>
-                <li>Use Windows Defender to allow the app</li>
-                <li>Build from source using the instructions in the README</li>
-                <li>Run the Python script directly instead of using the executable</li>
-            </ul>
-        </div>
-
-        <form id="configForm">
-            <div class="form-group">
-                <label for="groqKey">GROQ API Key (Required):</label>
-                <input type="text" id="groqKey" name="groqKey" required 
-                       placeholder="Enter your GROQ API key (starts with 'gsk_')">
-            </div>
-            <div class="form-group">
-                <label for="googleKey">Google (Gemini) API Key (Optional):</label>
-                <input type="text" id="googleKey" name="googleKey" 
-                       placeholder="Enter your Google API key (optional)">
-            </div>
-            <button type="submit">Generate Config File</button>
-        </form>
-        <button id="downloadBtn" onclick="downloadLUMA()">Download LUMA</button>
-        <div id="success" class="success">Configuration file generated successfully! Now click "Download LUMA" to get the application.</div>
+        <style>
+            .code-block {
+                background: #f8f9fa;
+                padding: 15px;
+                border-radius: 5px;
+                margin: 10px 0;
+            }
+            .code-block h4 {
+                margin: 0 0 10px 0;
+                color: #2c3e50;
+            }
+            pre {
+                background: #2c3e50;
+                color: #fff;
+                padding: 10px;
+                border-radius: 4px;
+                overflow-x: auto;
+            }
+            code {
+                font-family: 'Consolas', 'Monaco', monospace;
+            }
+        </style>
 
         <div class="setup-steps">
             <h3>💡 Usage Tips</h3>
@@ -182,43 +206,33 @@
     </div>
 
     <script>
-        document.getElementById('configForm').addEventListener('submit', async (e) => {
-            e.preventDefault();
+        // Add copy to clipboard functionality for code blocks
+        document.querySelectorAll('pre code').forEach((block) => {
+            block.addEventListener('click', (e) => {
+                const text = block.innerText;
+                navigator.clipboard.writeText(text);
+                
+                // Show temporary "Copied!" message
+                const copied = document.createElement('div');
+                copied.textContent = 'Copied!';
+                copied.style.position = 'absolute';
+                copied.style.right = '10px';
+                copied.style.top = '5px';
+                copied.style.background = '#27ae60';
+                copied.style.color = 'white';
+                copied.style.padding = '5px 10px';
+                copied.style.borderRadius = '3px';
+                copied.style.fontSize = '12px';
+                
+                block.parentElement.style.position = 'relative';
+                block.parentElement.appendChild(copied);
+                
+                setTimeout(() => copied.remove(), 2000);
+            });
             
-            const groqKey = document.getElementById('groqKey').value;
-            const googleKey = document.getElementById('googleKey').value;
-            
-            if (!groqKey) {
-                alert('GROQ API key is required!');
-                return;
-            }
-            
-            const configContent = `"""Build configuration with embedded API keys."""
-
-# API Keys
-GROQ_API_KEY = "${groqKey}"
-GEMINI_API_KEY = "${googleKey}"
-`;
-            
-            // Create and download the config file
-            const blob = new Blob([configContent], { type: 'text/plain' });
-            const url = window.URL.createObjectURL(blob);
-            const a = document.createElement('a');
-            a.href = url;
-            a.download = 'build_config.py';
-            document.body.appendChild(a);
-            a.click();
-            window.URL.revokeObjectURL(url);
-            document.body.removeChild(a);
-            
-            // Show success message
-            document.getElementById('success').style.display = 'block';
+            // Add cursor pointer to indicate clickable
+            block.style.cursor = 'pointer';
         });
-
-        function downloadLUMA() {
-            // Redirect to the latest release download
-            window.location.href = 'https://github.com/mc095/LUMA/releases/latest/download/LUMA.zip';
-        }
     </script>
 </body>
 </html>
