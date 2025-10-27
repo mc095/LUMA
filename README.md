@@ -24,10 +24,6 @@ Just  `pip install` and `GROQ_API_KEY`, Speak with your favourite Bot on all ava
 - Command system for control
 - Session statistics
 
-## System Architecture
-
-![LUMA Flow Diagram](demos/flow.png)
-
 The diagram above illustrates LUMA's core components and their interactions:
 
 1. **Audio Processing**:
