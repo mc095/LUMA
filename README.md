@@ -50,8 +50,6 @@ pip install -r requirements.txt
 python main.py
 ```
 
-For detailed setup instructions, configuration, and troubleshooting, see our [Technical Documentation](https://mc095.github.io/jsonparser/setup-luma.html)
-
 ---
 Feel free to clone it, use it, and have fun! 🌟
 
