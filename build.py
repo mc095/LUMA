@@ -12,7 +12,15 @@ def build_exe():
         '--name=LUMA',
         '--noconsole',
         '--onefile',
-        '--clean'
+        '--clean',
+        '--noupx',  # Disable UPX compression which often triggers antiviruses
+        # Add version information
+        '--version-file=version.txt',
+        # Add company and product info
+        '--icon=demos/icon.ico',  # You'll need to add an icon file
+        # Add file information
+        '--add-data=LICENSE;.',
+        '--add-data=README.md;.'
     ])
 
 def create_distribution():
