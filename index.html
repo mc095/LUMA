@@ -39,7 +39,7 @@
         }
     </script>
     <style>
-        /* Custom style for code blocks */
+        /* Custom style for code blocks (already dark-themed) */
         pre {
             background-color: #111827; /* dark-code */
             color: #d1d5db; /* gray-300 */
@@ -52,21 +52,18 @@
         pre code {
             font-family: 'Menlo', 'Monaco', 'Consolas', monospace;
         }
-
-        /* REMOVED FADE-IN/FADE-OUT STYLES 
-        */
         
     </style>
 </head>
-<body class="bg-white text-gray-800 font-sans antialiased">
+<body class="bg-gray-900 text-gray-300 font-sans antialiased">
 
     <header id="hero-section" class="flex flex-col items-center justify-center text-center mt-7 px-4 py-32 md:py-48">
         
-        <h1 id="hero-title" class="font-display text-3xl md:text-6xl font-bold text-gray-900 mb-8 leading-relaxed">
+        <h1 id="hero-title" class="font-display text-3xl md:text-6xl font-bold text-white mb-8 leading-relaxed">
             LUMA: Your Personal <span class="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">"Jarvis"</span>
         </h1>
         
-        <p id="hero-subtitle" class="text-lg md:text-xl text-gray-600 max-w-2xl mx-auto mb-10">
+        <p id="hero-subtitle" class="text-lg md:text-xl text-gray-400 max-w-2xl mx-auto mb-10">
             Intelligent, responsive, and always ready to assist.
         </p>
         
@@ -75,11 +72,11 @@
         </a>
 
         <div class="flex items-center gap-4 mt-8">
-            <a href="https://github.com/mc095/LUMA" target="_blank" class="flex items-center gap-2 text-gray-600 font-medium py-2 px-4 bg-gray-100 rounded-full transition-colors hover:bg-gray-200">
+            <a href="https://github.com/mc095/LUMA" target="_blank" class="flex items-center gap-2 text-gray-300 font-medium py-2 px-4 bg-gray-800 rounded-full transition-colors hover:bg-gray-700">
                 <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.82 1.23.82.72 1.23 1.88.88 2.34.67.07-.52.28-.88.51-1.08-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.28.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.08-.01 1.94-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
                 GitHub Repo
             </a>
-            <a href="https://www.linkedin.com/in/ganesh097/" target="_blank" class="flex items-center gap-2 text-gray-600 font-medium py-2 px-4 bg-gray-100 rounded-full transition-colors hover:bg-gray-200">
+            <a href="https://www.linkedin.com/in/ganesh097/" target="_blank" class="flex items-center gap-2 text-gray-300 font-medium py-2 px-4 bg-gray-800 rounded-full transition-colors hover:bg-gray-700">
                 <svg class="w-5 h-5" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.5 2h-17A1.5 1.5 0 002 3.5v17A1.5 1.5 0 003.5 22h17a1.5 1.5 0 001.5-1.5v-17A1.5 1.5 0 0020.5 2zM8 19H5v-9h3zM6.5 8.25A1.75 1.75 0 118.25 6.5 1.75 1.75 0 016.5 8.25zM19 19h-3v-4.74c0-1.42-.6-1.93-1.38-1.93-.78 0-1.22.51-1.41.95-.07.16-.09.38-.09.6v5.12h-3v-9h2.9v1.3a3.1 3.1 0 012.79-1.5c1.92 0 3.2 1.26 3.2 3.99V19z"></path></svg>
                 Creator
             </a>
@@ -90,45 +87,45 @@
     <div class="container mx-auto max-w-5xl px-4 pb-16 md:pb-24">
 
         <section id="features" class="mb-24 md:mb-32">
-            <h2 class="text-4xl font-bold text-gray-900 text-center mb-16">
+            <h2 class="text-4xl font-bold text-white text-center mb-16">
                 Why LUMA?
             </h2>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-sm">
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 shadow-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-primary mb-4">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M12 18.75a6 6 0 0 0 6-6v-1.5m-6 7.5a6 6 0 0 1-6-6v-1.5m6 7.5v3.75m-3.75 0h7.5M12 15.75a3 3 0 0 1-3-3V4.5a3 3 0 1 1 6 0v8.25a3 3 0 0 1-3 3Z" />
                     </svg>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Seamless Voice-to-Voice</h3>
-                    <p class="text-gray-600">Fluid conversations with real-time speech recognition and natural text-to-speech output.</p>
+                    <h3 class="text-2xl font-semibold text-white mb-2">Seamless Voice-to-Voice</h3>
+                    <p class="text-gray-400">Fluid conversations with real-time speech recognition and natural text-to-speech output.</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-sm">
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 shadow-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-primary mb-4">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M14.25 7.756a4.5 4.5 0 1 0 0 8.488M7.5 10.5h5.25m-5.25 3h5.25M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
                     </svg>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Autonomous Web Agent</h3>
-                    <p class="text-gray-600">Integrated AGNO agent with Gemini API for local web surfing and task management.</p>
+                    <h3 class="text-2xl font-semibold text-white mb-2">Autonomous Web Agent</h3>
+                    <p class="text-gray-400">Integrated AGNO agent with Gemini API for local web surfing and task management.</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-sm">
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 shadow-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-primary mb-4">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 13.5l10.5-11.25L12 10.5h8.25L9.75 21.75 12 13.5H3.75Z" />
                     </svg>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">AI Powered</h3>
-                    <p class="text-gray-600">Driven by Groq LLaMA 3.1 and Google Gemini for high-speed, intelligent responses.</p>
+                    <h3 class="text-2xl font-semibold text-white mb-2">AI Powered</h3>
+                    <p class="text-gray-400">Driven by Groq LLaMA 3.1 and Google Gemini for high-speed, intelligent responses.</p>
                 </div>
-                <div class="bg-gray-50 p-8 rounded-xl border border-gray-200 shadow-sm">
+                <div class="bg-gray-800 p-8 rounded-xl border border-gray-700 shadow-sm">
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-12 h-12 text-primary mb-4">
                         <path stroke-linecap="round" stroke-linejoin="round" d="M6.75 7.5l3 2.25-3 2.25m3 0H3m3.75 0H16.5m-1.5 3.75L18 17.25l-2.25 2.25m-3-4.5H21m-3.75 0H7.5m1.5-3.75L6 3.75l2.25-2.25m3 4.5H3m3.75 0H16.5" />
                     </svg>
-                    <h3 class="text-2xl font-semibold text-gray-900 mb-2">Beautiful Terminal UI</h3>
-                    <p class="text-gray-600">A clean, interactive interface for your terminal, complete with session statistics.</p>
+                    <h3 class="text-2xl font-semibold text-white mb-2">Beautiful Terminal UI</h3>
+                    <p class="text-gray-400">A clean, interactive interface for your terminal, complete with session statistics.</p>
                 </div>
             </div>
         </section>
 
         <section id="capabilities" class="mb-24 md:mb-32 space-y-8">
-            <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
-                <h3 class="text-3xl font-bold text-gray-900 mb-4">Core Capabilities</h3>
-                <ul class="list-disc list-outside pl-5 space-y-2 text-gray-700 text-lg">
+            <div class="bg-gray-800 p-8 rounded-xl border border-gray-700">
+                <h3 class="text-3xl font-bold text-white mb-4">Core Capabilities</h3>
+                <ul class="list-disc list-outside pl-5 space-y-2 text-gray-300 text-lg">
                     <li>Seamless voice-to-voice conversations</li>
                     <li>Real-time speech recognition (using Moonshine ASR)</li>
                     <li>Natural language AI responses (using Groq LLaMA 3.1)</li>
@@ -137,9 +134,9 @@
                 </ul>
             </div>
 
-            <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
-                <h3 class="text-3xl font-bold text-gray-900 mb-4">Smart Features</h3>
-                <ul class="list-disc list-outside pl-5 space-y-2 text-gray-700 text-lg">
+            <div class="bg-gray-800 p-8 rounded-xl border border-gray-700">
+                <h3 class="text-3xl font-bold text-white mb-4">Smart Features</h3>
+                <ul class="list-disc list-outside pl-5 space-y-2 text-gray-300 text-lg">
                     <li>Context-aware conversations</li>
                     <li>Automatic speech detection (using Silero VAD)</li>
                     <li>Real-time processing with audio buffering</li>
@@ -148,29 +145,29 @@
                 </ul>
             </div>
 
-            <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
-                <h3 class="text-3xl font-bold text-gray-900 mb-4">🛠️ How It Works (Architecture)</h3>
-                <p class="text-lg text-gray-600 mb-6">LUMA's functionality is divided into three core component groups:</p>
+            <div class="bg-gray-800 p-8 rounded-xl border border-gray-700">
+                <h3 class="text-3xl font-bold text-white mb-4">🛠️ How It Works (Architecture)</h3>
+                <p class="text-lg text-gray-400 mb-6">LUMA's functionality is divided into three core component groups:</p>
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <div>
-                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Audio Processing:</h4>
-                        <ul class="list-disc list-outside pl-5 space-y-1 text-gray-700">
+                        <h4 class="text-xl font-semibold text-white mb-2">Audio Processing:</h4>
+                        <ul class="list-disc list-outside pl-5 space-y-1 text-gray-300">
                             <li>Raw audio input capture</li>
                             <li>Silero VAD for speech detection</li>
                             <li>Audio buffering and chunking</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 class="text-xl font-semibold text-gray-900 mb-2">Speech Processing Pipeline:</h4>
-                        <ul class="list-disc list-outside pl-5 space-y-1 text-gray-700">
+                        <h4 class="text-xl font-semibold text-white mb-2">Speech Processing Pipeline:</h4>
+                        <ul class="list-disc list-outside pl-5 space-y-1 text-gray-300">
                             <li>Moonshine ASR for speech-to-text</li>
                             <li>Groq LLaMA 3.1 for language processing</li>
                             <li>pyttsx3 for text-to-speech synthesis</li>
                         </ul>
                     </div>
                     <div>
-                        <h4 class="text-xl font-semibold text-gray-900 mb-2">System Components:</h4>
-                        <ul class="list-disc list-outside pl-5 space-y-1 text-gray-700">
+                        <h4 class="text-xl font-semibold text-white mb-2">System Components:</h4>
+                        <ul class="list-disc list-outside pl-5 space-y-1 text-gray-300">
                             <li>Terminal UI for interaction</li>
                             <li>Session statistics tracking</li>
                             <li>Command handler system</li>
@@ -182,14 +179,14 @@
 
 
         <section id="install" class="space-y-12">
-            <h2 class="text-4xl font-bold text-gray-900 text-center">
+            <h2 class="text-4xl font-bold text-white text-center">
                 Get Started in Minutes
             </h2>
 
-            <div class="bg-white p-8 rounded-xl border-l-4 border-primary shadow-lg">
-                <h3 class="text-2xl font-semibold text-gray-900 mb-3">Step 1: Get Your API Keys</h3>
-                <p class="text-gray-600 mb-6">You must have these keys before installing. The script will ask for them.</p>
-                <ul class="list-disc list-outside pl-5 space-y-3 text-gray-700">
+            <div class="bg-gray-800 p-8 rounded-xl border-l-4 border-primary shadow-lg">
+                <h3 class="text-2xl font-semibold text-white mb-3">Step 1: Get Your API Keys</h3>
+                <p class="text-gray-400 mb-6">You must have these keys before installing. The script will ask for them.</p>
+                <ul class="list-disc list-outside pl-5 space-y-3 text-gray-300">
                     <li>
                         <strong>GROQ API Key (Required):</strong>
                         <a href="https://console.groq.com/" target="_blank" class="text-primary font-medium underline hover:text-primary-hover">
@@ -206,12 +203,12 @@
             </div>
             
             <div>
-                <h3 class="text-2xl font-semibold text-gray-900 mb-5">Step 2: Run the Installer</h3>
-                <div class="flex border-b border-gray-300 mb-0">
+                <h3 class="text-2xl font-semibold text-white mb-5">Step 2: Run the Installer</h3>
+                <div class="flex border-b border-gray-700 mb-0">
                     <button id="btn-windows" onclick="showPanel('windows')" class="tab-btn py-3 px-6 text-primary border-b-2 border-primary font-semibold">
                         Windows (PowerShell)
                     </button>
-                    <button id="btn-macos" onclick="showPanel('macos')" class="tab-btn py-3 px-6 text-gray-500 border-b-2 border-transparent font-medium hover:text-gray-700">
+                    <button id="btn-macos" onclick="showPanel('macos')" class="tab-btn py-3 px-6 text-gray-400 border-b-2 border-transparent font-medium hover:text-gray-200">
                         Linux / MacOS (Bash)
                     </button>
                 </div>
@@ -238,9 +235,9 @@
                 </div>
             </div>
 
-            <div class="bg-gray-100 p-8 rounded-xl">
-                <h3 class="text-2xl font-semibold text-gray-900 mb-4">The installation script will:</h3>
-                <ol class="list-decimal list-inside text-gray-700 space-y-2">
+            <div class="bg-gray-800 p-8 rounded-xl">
+                <h3 class="text-2xl font-semibold text-white mb-4">The installation script will:</h3>
+                <ol class="list-decimal list-inside text-gray-300 space-y-2">
                     <li>Create a new directory for LUMA in a safe location.</li>
                     <li>Download the latest secure LUMA executable.</li>
                     <li>Prompt you to enter your API keys.</li>
@@ -250,21 +247,21 @@
         </section>
 
         <section id="info" class="mt-24 md:mt-32 space-y-12">
-            <div class="bg-blue-50 p-8 rounded-xl border-l-4 border-blue-500 flex items-start space-x-5">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-blue-600 flex-shrink-0">
+            <div class="bg-blue-950 p-8 rounded-xl border-l-4 border-blue-500 flex items-start space-x-5">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-10 h-10 text-blue-400 flex-shrink-0">
                     <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75m-3-7.036A11.959 11.959 0 0 1 3.598 6 11.99 11.99 0 0 0 3 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.623 0-1.662-.36-3.26-.998-4.751M12 2.25A11.959 11.959 0 0 0 3.598 6M12 2.25a11.959 11.959 0 0 1 8.402 3.75" />
                 </svg>
                 <div>
-                    <h3 class="text-2xl font-semibold text-blue-900 mb-2">Your Security is Our Priority</h3>
-                    <p class="text-blue-800 text-lg">
+                    <h3 class="text-2xl font-semibold text-blue-200 mb-2">Your Security is Our Priority</h3>
+                    <p class="text-blue-300 text-lg">
                         LUMA runs 100% locally. Your API keys are never sent to any server. They are stored securely in a configuration file *only on your computer*.
                     </p>
                 </div>
             </div>
 
-            <div class="bg-gray-50 p-8 rounded-xl border border-gray-200">
-                <h3 class="text-2xl font-semibold text-gray-900 mb-4">💡 Usage Tips</h3>
-                <ol class="list-decimal list-inside text-gray-700 space-y-2">
+            <div class="bg-gray-800 p-8 rounded-xl border border-gray-700">
+                <h3 class="text-2xl font-semibold text-white mb-4">💡 Usage Tips</h3>
+                <ol class="list-decimal list-inside text-gray-300 space-y-2">
                     <li>Ensure your microphone is connected and working.</li>
                     <li>Speak clearly and naturally.</li>
                     <li>For current events, include words like "latest" or "what's new on...".</li>
@@ -275,18 +272,18 @@
         </section>
 
         <section id="manual-install" class="mt-24 md:mt-32">
-            <details class="bg-gray-50 border border-gray-200 rounded-xl overflow-hidden shadow-sm">
-                <summary class="text-xl font-semibold text-gray-800 p-6 cursor-pointer hover:bg-gray-100 transition-colors flex justify-between items-center">
+            <details class="bg-gray-800 border border-gray-700 rounded-xl overflow-hidden shadow-sm">
+                <summary class="text-xl font-semibold text-gray-200 p-6 cursor-pointer hover:bg-gray-700 transition-colors flex justify-between items-center">
                     <span>🔧 Manual Installation (Advanced)</span>
-                    <span class="text-gray-400 text-sm group-open:hidden">Show</span>
-                    <span class="text-gray-400 text-sm hidden group-open:inline">Hide</span>
+                    <span class="text-gray-500 text-sm group-open:hidden">Show</span>
+                    <span class="text-gray-500 text-sm hidden group-open:inline">Hide</span>
                 </summary>
                 
-                <div class="p-6 border-t border-gray-200 space-y-8">
-                    <p class="text-gray-600">If you prefer to install manually:</p>
+                <div class="p-6 border-t border-gray-700 space-y-8">
+                    <p class="text-gray-400">If you prefer to install manually:</p>
                     
                     <div>
-                        <h4 class="font-semibold text-lg text-gray-900 mb-3">1. Download LUMA executable:</h4>
+                        <h4 class="font-semibold text-lg text-white mb-3">1. Download LUMA executable:</h4>
                          <div class="code-wrapper relative">
                             <pre><code class="language-bash">curl -L -o LUMA.exe https://github.com/mc095/LUMA/releases/latest/download/LUMA.exe</code></pre>
                             <button onclick="copyCode(this)" class="copy-btn absolute top-4 right-4 p-2 bg-gray-600 rounded-lg text-gray-300 hover:text-white hover:bg-gray-500 transition-colors">
@@ -297,7 +294,7 @@
                     </div>
 
                     <div>
-                        <h4 class="font-semibold text-lg text-gray-900 mb-3">2. Create <code class="text-sm bg-gray-200 px-1 py-0.5 rounded">build_config.py</code> with your API keys:</h4>
+                        <h4 class="font-semibold text-lg text-white mb-3">2. Create <code class="text-sm bg-gray-600 text-gray-100 px-1 py-0.5 rounded">build_config.py</code> with your API keys:</h4>
                          <div class="code-wrapper relative">
                             <pre><code class="language-python">echo """Build configuration with embedded API keys.""" > build_config.py
 echo GROQ_API_KEY = "your-groq-key-here" >> build_config.py
@@ -312,10 +309,12 @@ echo GEMINI_API_KEY = "your-gemini-key-here" >> build_config.py</code></pre>
             </details>
         </section>
 
-        <footer class="text-center text-gray-500 mt-24 md:mt-32 border-t border-gray-200 pt-12">
+        <footer class="text-center text-gray-500 mt-24 md:mt-32 border-t border-gray-700 pt-12">
             <p></p>
         </footer>
-    </div> <script>
+    </div> 
+    
+    <script>
         // --- Tabbed Interface ---
         function showPanel(panelId) {
             // Hide all panels
@@ -327,10 +326,10 @@ echo GEMINI_API_KEY = "your-gemini-key-here" >> build_config.py</code></pre>
             const btnMacos = document.getElementById('btn-macos');
             
             btnWindows.classList.remove('text-primary', 'border-primary', 'font-semibold');
-            btnWindows.classList.add('text-gray-500', 'border-transparent', 'font-medium');
+            btnWindows.classList.add('text-gray-400', 'border-transparent', 'font-medium'); // Dark mode: inactive text-gray-400
             
             btnMacos.classList.remove('text-primary', 'border-primary', 'font-semibold');
-            btnMacos.classList.add('text-gray-500', 'border-transparent', 'font-medium');
+            btnMacos.classList.add('text-gray-400', 'border-transparent', 'font-medium'); // Dark mode: inactive text-gray-400
             
             // Show the target panel
             document.getElementById(`panel-${panelId}`).classList.remove('hidden');
@@ -338,7 +337,7 @@ echo GEMINI_API_KEY = "your-gemini-key-here" >> build_config.py</code></pre>
             // Activate the target button
             const activeBtn = document.getElementById(`btn-${panelId}`);
             activeBtn.classList.add('text-primary', 'border-primary', 'font-semibold');
-            activeBtn.classList.remove('text-gray-500', 'border-transparent', 'font-medium');
+            activeBtn.classList.remove('text-gray-400', 'border-transparent', 'font-medium'); // Dark mode: remove inactive text-gray-400
         }
 
         // --- Copy to Clipboard ---
@@ -361,9 +360,6 @@ echo GEMINI_API_KEY = "your-gemini-key-here" >> build_config.py</code></pre>
                 }, 2000);
             });
         }
-
-        /* REMOVED FADE-OUT/FADE-IN SCRIPT 
-        */
 
     </script>
 
