@@ -7,21 +7,29 @@ import zipfile
 
 def build_exe():
     """Build the LUMA executable."""
-    PyInstaller.__main__.run([
+    args = [
         'main.py',
         '--name=LUMA',
         '--noconsole',
         '--onefile',
         '--clean',
-        '--noupx',  # Disable UPX compression which often triggers antiviruses
-        # Add version information
-        '--version-file=version.txt',
-        # Add company and product info
-        '--icon=demos/icon.ico',  # You'll need to add an icon file
-        # Add file information
-        '--add-data=LICENSE;.',
-        '--add-data=README.md;.'
-    ])
+        '--noupx'  # Disable UPX compression which often triggers antiviruses
+    ]
+
+    # Only add optional files if they exist to avoid PyInstaller errors
+    if os.path.exists('version.txt'):
+        args.append('--version-file=version.txt')
+
+    icon_path = os.path.join('demos', 'icon.ico')
+    if os.path.exists(icon_path):
+        args.append(f'--icon={icon_path}')
+
+    for fname in ('LICENSE', 'README.md'):
+        if os.path.exists(fname):
+            # On Windows PyInstaller uses semicolon to separate src and dest
+            args.append(f'--add-data={fname};.')
+
+    PyInstaller.__main__.run(args)
 
 def create_distribution():
     """Create a ZIP distribution package."""
