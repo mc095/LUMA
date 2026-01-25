@@ -3,15 +3,10 @@
 
 $ErrorActionPreference = "Stop"
 
+# Use ASCII art that works in all terminals
 Write-Host ""
-Write-Host "  _    _   _ __  __    _    " -ForegroundColor Cyan
-Write-Host " | |  | | | |  \/  |  / \   " -ForegroundColor Cyan
-Write-Host " | |  | | | | |\/| | / _ \  " -ForegroundColor Cyan
-Write-Host " | |__| |_| | |  | |/ ___ \ " -ForegroundColor Cyan
-Write-Host " |_____\___/|_|  |_/_/   \_\" -ForegroundColor Cyan
-Write-Host ""
-Write-Host " Personal Voice AI Installer" -ForegroundColor Gray
-Write-Host " ───────────────────────────" -ForegroundColor Gray
+Write-Host "  LUMA - Personal Voice AI" -ForegroundColor Cyan
+Write-Host "  ========================" -ForegroundColor Gray
 Write-Host ""
 
 # Check for Python
@@ -42,27 +37,35 @@ if (Test-Path $installDir) {
     Push-Location $installDir
     git pull --quiet
     Pop-Location
-} else {
+}
+else {
     git clone --quiet https://github.com/mc095/LUMA.git $installDir
 }
 Write-Host "  OK Installed to $installDir" -ForegroundColor Green
 
 # Install dependencies
 Write-Host "[4/4] Installing dependencies..." -ForegroundColor Yellow
-Push-Location $installDir
-uv sync --quiet 2>$null
-Pop-Location
-Write-Host "  OK Dependencies installed" -ForegroundColor Green
+if (Test-Path $installDir) {
+    Push-Location $installDir
+    uv sync --quiet 2>$null
+    Pop-Location
+    Write-Host "  OK Dependencies installed" -ForegroundColor Green
+}
+else {
+    Write-Host "  X Failed to access installation directory" -ForegroundColor Red
+    exit 1
+}
 
 Write-Host ""
-Write-Host "───────────────────────────────────────" -ForegroundColor Gray
+Write-Host "=======================================" -ForegroundColor Gray
 Write-Host " Installation complete!" -ForegroundColor Green
-Write-Host "───────────────────────────────────────" -ForegroundColor Gray
+Write-Host "=======================================" -ForegroundColor Gray
 Write-Host ""
-Write-Host " To start LUMA:" -ForegroundColor White
+Write-Host " To start LUMA, copy and run these commands:" -ForegroundColor White
+Write-Host ""
 Write-Host "   cd $installDir" -ForegroundColor Cyan
 Write-Host "   uv run python main.py" -ForegroundColor Cyan
 Write-Host ""
-Write-Host " On first run, you'll need your Groq API key." -ForegroundColor Gray
+Write-Host " Note: On first run, you will need your Groq API key." -ForegroundColor Gray
 Write-Host " Get one free at: https://console.groq.com/keys" -ForegroundColor Gray
 Write-Host ""
