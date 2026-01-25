@@ -1,0 +1,87 @@
+[project]
+name = "luma"
+version = "2.0.0"
+description = "Personal Voice AI with Memory - Voice assistant with web search and notes"
+authors = [
+    { name = "Ganesh", email = "ganeshvathumilli@gmail.com" }
+]
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.11"
+keywords = ["voice-assistant", "ai", "memory", "speech-recognition", "tts"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    # AI
+    "agno>=1.7.0",
+    "groq>=0.29.0",
+    "ddgs>=7.0.0",
+    "httpx>=0.26.0",
+    
+    # Voice Processing
+    "sounddevice>=0.5.0",
+    "silero-vad>=5.1.0",
+    "openwakeword>=0.5.0",
+    "edge-tts>=7.0.0",
+    "pygame>=2.5.0",
+    
+    # Speech Recognition
+    "useful-moonshine-onnx @ git+https://github.com/moonshine-ai/moonshine.git#subdirectory=moonshine-onnx",
+    "onnxruntime>=1.17.0",
+    "numpy>=1.24.0",
+    "torch>=2.0.0",
+    
+    # Database
+    "sqlalchemy>=2.0.0",
+    
+    # Terminal UI
+    "rich>=13.7.0",
+    
+    # Configuration
+    "python-dotenv>=1.0.0",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.23.0",
+    "pytest-cov>=4.1.0",
+    "ruff>=0.1.0",
+]
+
+[project.scripts]
+luma = "luma.__main__:main"
+
+[project.urls]
+Homepage = "https://github.com/mc095/LUMA"
+Repository = "https://github.com/mc095/LUMA.git"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["luma"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+select = ["E", "F", "I", "N", "W", "UP"]
+ignore = ["E501"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+addopts = "-v --tb=short"
