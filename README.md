@@ -4,23 +4,23 @@
 
 LUMA is a privacy-first voice assistant powered by state-of-the-art AI. It runs locally on your machine, remembers what you tell it, and can search the web for real-time information.
 
-## 🎬 Demo
-
-<a href="https://www.loom.com/share/73ef15b53a0542feb02dc8dc2ad42b80">
-  <img src="https://cdn.loom.com/sessions/thumbnails/73ef15b53a0542feb02dc8dc2ad42b80-7728d94eadf2ac2b-full-play.gif" alt="LUMA Demo" width="100%">
-</a>
+<div align="center">
+  <video src="https://github.com/user-attachments/assets/34e614d0-72f2-49a8-8207-bbf34c81f90b" width="100%" controls autoplay muted loop>
+    Your browser does not support the video tag.
+  </video>
+</div>
 
 ## ✨ Features
 
 | Feature | Description |
 |---------|-------------|
-| 🎤 **Voice Activated** | Say "Alexa" to start talking |
-| 🧠 **Memory** | Remembers things you tell it |
-| 🔍 **Web Search** | Real-time DuckDuckGo search |
-| 🔒 **Private** | Runs locally, your data stays with you |
-| ⚡ **Fast** | Groq-powered for instant responses |
+|  **Voice Activated** | Say "Alexa" to start talking |
+|  **Memory** | Remembers things you tell it |
+|  **Web Search** | Real-time DuckDuckGo search |
+|  **Private** | Runs locally, your data stays with you |
+|  **Fast** | Groq-powered for instant responses |
 
-## 🚀 Quick Start
+##  Quick Start
 
 ### One-Command Install (Windows)
 
@@ -89,13 +89,3 @@ LUMA/
 - Python 3.11+
 - Microphone & Speakers
 - Groq API key (free)
-
-## 📄 License
-
-MIT License
-
----
-
-<p align="center">
-  Made with ❤️ by <a href="https://github.com/mc095">Ganesh</a>
-</p>
