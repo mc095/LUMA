@@ -47,18 +47,7 @@ echo "GROQ_API_KEY=your_key_here" > .env
 # 5. Run LUMA
 uv run python main.py
 ```
-
-## 💬 Usage
-
 Once running, simply say **"Alexa"** to activate, then speak naturally:
-
-| Command | Example |
-|---------|---------|
-| **Remember** | "Remember that my meeting is at 3pm" |
-| **Recall** | "What did I tell you about the meeting?" |
-| **Forget** | "Forget about the meeting" |
-| **Search** | "What's the weather in New York?" |
-| **Settings** | "Settings" to change API key |
 
 ## 📁 Project Structure
 
